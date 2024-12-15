@@ -1,6 +1,6 @@
 # Live Markdown Editor
 
-This project is a simple live markdown editor built with React. It allows you to write markdown text in a textarea and see the rendered output in real-time.
+This project is a simple live markdown editor built with React. It allows you to write markdown text in an editor and see the rendered output in real-time.
 
 ## Features
 
