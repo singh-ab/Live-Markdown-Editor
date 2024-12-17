@@ -1,10 +1,16 @@
 import React, { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import {ReactComponent as MoonIcon} from './components/moon.svg';
+import {ReactComponent as SunIcon} from './components/sun.svg';
+import ThemeSwitch from './components/ThemeSwitch';
+
 export default function MarkdownEditor() {
     const [markdownInput, setMarkdownInput] = useState()
     return (
         <>
         <h1 id='main'>Live Markdown Editor</h1>
+        <ThemeSwitch/>
+        
         <div className="App">
             <div className="wrapper">
                 <div className="head">
