@@ -1,8 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+:root{
+  --bg-color: #c1c8c4;
+  --text-font-color: #0d2a26;
+  --code-font-color: #1d1d1d;
+  --text-area-bg: #eceeee;
+  --accent-color: #1d1d1d;  
+}
+[data-theme="light"]{
+  --bg-color: #c1c8c4;
+  --text-font-color: #0d2a26;
+  --code-font-color: #1d1d1d;
+  --text-area-bg: #eceeee;
+  --accent-color: #bddbcb;
+}
+
+[data-theme="dark"]{
+  --bg-color: #102525;
+  --text-font-color: #fcfcfc;
+  --code-font-color: #c4fcd0;
+  --text-area-bg: #092635;
+  --accent-color: #3c3f3d;
+}
 body {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-font-color);
 }
 
 #main{
@@ -20,17 +44,18 @@ body {
 
 .wrapper {
   width: 45%;
-  height: 75%;
+  height: 70vh;
   margin: 25px;
   margin-top: 0%;
   outline: none;
   display: flex;
   padding: 20px;
-  background: #eceeee;
+  background: var(--text-area-bg);
   flex-direction: column;
-  border: 2px solid #ccc;
+  border: 2px solid var(--text-font-color);
   overflow: hidden;
   overflow-y: auto;
+  border-radius: 2.5%;
 }
 
 .head {
@@ -51,7 +76,8 @@ textarea {
   overflow-x: hidden;
   font-size: 17px;
   resize: none;
-  background: #eceeee;
+  background: var(--text-area-bg);
+  color: var(--text-font-color);
 }
 
 .markdown {
@@ -62,5 +88,34 @@ textarea {
   height: 100%;
   resize: none;
   overflow-x: hidden;
-  background: #fff;
+  background: var(--text-area-bg);
+  color: var(--code-font-color);
+}
+
+#switch{
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+/* .switch_label svg:last-child{
+  display: none;
+} */
+
+[data-theme="light"] #switch svg:first-child{
+  display: none;
+}
+/* #switch svg:first-child{
+  display: none;
+} */
+[data-theme="dark"] #switch svg:last-child{
+  display: none;
 }
